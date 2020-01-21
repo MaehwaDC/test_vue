@@ -18,5 +18,5 @@
       description: String,
       dateTime: Date,
     }
-  }
+  };
 </script>
