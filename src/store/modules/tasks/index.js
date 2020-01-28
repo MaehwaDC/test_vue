@@ -2,7 +2,9 @@ import { ADD_TASK } from '@/store/modules/tasks/types';
 
 export default {
   state: {
-    list: [],
+    list: [
+      { id: 0, title: "test title", body: "test body" }
+    ],
   },
   mutations: {
     [ADD_TASK]: (state, payload) => (
@@ -11,7 +13,7 @@ export default {
   },
   actions: {
     addTaskAction: (context, task) => {
-      context.increment({
+      context.commit({
         type: ADD_TASK,
         task: task
       });

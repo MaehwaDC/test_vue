@@ -1,29 +1,26 @@
 <template>
-  <section class="columns">
+  <section class="section columns">
     <div class="column">
       <div class="title is-capitalized is-4">
-        task list
+        task list:
       </div>
-      <div class="is-flex">
-        <Task
-          v-bind:key="task.id"
-          v-for="task in tasks"
-          title="task.title"
-          description="task.description"
-          date-time="task.date"
-        />
+      <TaskList />
+    </div>
+    <div class="column">
+      <div class="title is-capitalized is-4">
+        Task info:
       </div>
     </div>
   </section>
 </template>
 
 <script>
-  import Task from "@/components/Cards/Task"
+  import TaskList from "@/components/TaskList"
 
   export default {
     name: "Task",
     components: {
-      Task,
+      TaskList,
     },
     computed: {
       tasks() {
