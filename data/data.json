@@ -1,0 +1,18 @@
+{ 
+  "data": [
+    { 
+      "category": "Recently viewed",
+      "boards": [
+        {
+          "name": "veu_test",
+          "discription": "test-discription",
+          "users": [
+            { 
+              "imgUrl": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -18,9 +18,11 @@
 
 <script>
 import cardsRow from '@/components/CardsRow'
+import { boardCard } from '@/components/Cards';
 export default {
   components: {
     cardsRow,
+    boardCard,
   }
 }
 </script>

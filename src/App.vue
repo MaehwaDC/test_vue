@@ -3,7 +3,7 @@
     <Header />
     <main class="content-wrapper" role="main">
       <router-view />
-    </main>
+    </main> 
   </div>
 </template>
 
