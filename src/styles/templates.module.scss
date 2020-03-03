@@ -1,0 +1,8 @@
+
+@import "./reset.scss";
+@import "./mixins.scss";
+@import "./layouts.module.scss";
+
+html {
+  @extend %default-font-style;
+}

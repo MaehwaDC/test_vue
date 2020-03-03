@@ -3,8 +3,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
-import Home from './Home'
-import Tasks from './Tasks'
+import BoardsListPage from './BoardsListPage'
+import BoardPage from './BoardPage'
 
 Vue.use(VueRouter);
 
@@ -14,8 +14,8 @@ Vue.use(VueRouter);
 // через `Vue.extend()`, так и просто объект с опциями компонента.
 // Мы поговорим о вложенных маршрутах позднее.
 export const routes = [
-  { path: '/', name: 'home', component: Home },
-  { path: '/tasks', name: 'tasks', component: Tasks }
+  { path: '/', name: 'home', component: BoardsListPage },
+  { path: '/tasks', name: 'board', component: BoardPage }
 ];
 
 // 3. Создаём экземпляр маршрутизатора и передаём маршруты в опции `routes`

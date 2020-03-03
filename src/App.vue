@@ -1,11 +1,17 @@
 <template>
   <div id="app">
     <Header />
-    <main class="container" role="main">
+    <main class="content-wrapper" role="main">
       <router-view />
     </main>
   </div>
 </template>
+
+<style lang="scss">
+
+
+
+</style>
 
 <script>
   import Header from '@/components/Header'
