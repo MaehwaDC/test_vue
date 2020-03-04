@@ -1,10 +1,9 @@
-import { ADD_TASK } from '@/store/modules/tasks/types';
+import { ADD_TASK } from './types';
+import data from '../../../../data/data.json';
 
 export default {
   state: {
-    list: [
-      { id: 0, title: "test title", body: "test body" }
-    ],
+    list: data,
   },
   mutations: {
     [ADD_TASK]: (state, payload) => (
@@ -12,7 +11,7 @@ export default {
     )
   },
   actions: {
-    addTaskAction: (context, task) => {
+    addCategoryAction: (context, task) => {
       context.commit({
         type: ADD_TASK,
         task: task
@@ -20,7 +19,7 @@ export default {
     }
   },
   getters: {
-    getTasks: (state) => {
+    getCategories: (state) => {
       return state.list;
     }
   }
