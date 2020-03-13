@@ -6,21 +6,19 @@ export default {
     list: data,
   },
   mutations: {
-    [ADD_TASK]: (state, payload) => (
-      state.tasks.push(payload.task)
-    )
+    [ADD_TASK]: (state, payload) => state.tasks.push(payload.task),
   },
   actions: {
     addCategoryAction: (context, task) => {
       context.commit({
         type: ADD_TASK,
-        task: task
+        task: task,
       });
-    }
+    },
   },
   getters: {
-    getCategories: (state) => {
+    getCategories: state => {
       return state.list;
-    }
-  }
-}
+    },
+  },
+};

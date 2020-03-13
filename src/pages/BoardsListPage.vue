@@ -1,35 +1,37 @@
-
 <template>
   <div>
-    <cardsRow 
-      v-for="category in getCategories" 
-      :key="category.name" 
-      :title="category.name"
+    <cards-row
+      v-for="category in getCategories"
+      :key="category.name"
+      :name="category.name"
     >
-      <boardCard
+      <board-card
         v-for="board in category.boards"
         :key="board.name"
-        :title="board.name"
-        :discription="board.description"
-        :users="board.users"
+        v-bind="board"
+        :class="$style.card"
       />
-    </cardsRow>
+    </cards-row>
   </div>
 </template>
 
+<style lang="scss" module>
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+</style>
+
 <script>
-import cardsRow from '@/components/CardsRow'
-import { boardCard } from '@/components/Cards';
-import { mapGetters } from 'vuex';
-export default {
-  components: {
-    cardsRow,
-    boardCard,
-  },
-  computed: {
-    ...mapGetters([
-      'getCategories'
-    ])
-  },
-}
+  import CardsRow from '@/components/CardsRow';
+  import { BoardCard } from '@/components/Cards';
+  import { mapGetters } from 'vuex';
+  export default {
+    components: {
+      CardsRow,
+      BoardCard,
+    },
+    computed: {
+      ...mapGetters(['getCategories']),
+    },
+  };
 </script>

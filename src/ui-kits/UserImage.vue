@@ -1,20 +1,21 @@
-
 <template>
-  <img :src="imgUrl" :class="$style.userImage" >
+  <img :src="imgUrl" :class="$style.userImage" />
 </template>
 
-<style lang="scss" module scoped>
-.userImage {
-  border-radius: 100%;
-}
+<style lang="scss" module>
+  .userImage {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+  }
 </style>
 
 <script>
-export default {
-  props: {
-    user: {
+  export default {
+    props: {
       imgUrl: String,
-    }
-  }
-}
+    },
+  };
 </script>

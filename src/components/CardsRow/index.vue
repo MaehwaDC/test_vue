@@ -1,38 +1,42 @@
-
 <template>
-<div>
-  <cardRowTitle>{{ title }}</cardRowTitle>
-  <vue-custom-scrollbar :class="$style.scrollArea" :settings="settings">
-    <slot />
-  </vue-custom-scrollbar>
-</div>
+  <div>
+    <card-row-title>{{ name }}</card-row-title>
+    <vue-custom-scrollbar :settings="settings">
+      <div :class="$style.scrollArea">
+        <slot />
+      </div>
+    </vue-custom-scrollbar>
+  </div>
 </template>
 
-<style lang="scss" module scoped>
+<style lang="scss" module>
   .scrollArea {
-    width: 100%;
-    overflow: hidden;
     position: relative;
+    padding: 20px 0;
+
+    display: inline-flex;
   }
 </style>
 
 <script>
-import cardRowTitle from "./CardRowTitle"
-import vueCustomScrollbar from 'vue-custom-scrollbar'
-export default {
-  components: {
-    vueCustomScrollbar,
-    cardRowTitle,
-  },
-  data() {
-    return {
-      settings: {
-        maxScrollbarLength: 60
-      }
-    }
-  },
-  props: {
-    title: String,
-  }
-}
+  import CardRowTitle from './CardRowTitle';
+  import VueCustomScrollbar from 'vue-custom-scrollbar';
+  export default {
+    components: {
+      VueCustomScrollbar,
+      CardRowTitle,
+    },
+    data() {
+      return {
+        settings: {
+          width: '400px',
+          suppressScrollY: true,
+          autoHide: false,
+        },
+      };
+    },
+    props: {
+      name: String,
+    },
+  };
 </script>
