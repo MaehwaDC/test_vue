@@ -1,11 +1,11 @@
 <template>
   <div>
     <card-row-title>{{ name }}</card-row-title>
-    <vue-custom-scrollbar :settings="settings">
+    <custom-scrollbar :settings="settings">
       <div :class="$style.scrollArea">
         <slot />
       </div>
-    </vue-custom-scrollbar>
+    </custom-scrollbar>
   </div>
 </template>
 
@@ -20,10 +20,10 @@
 
 <script>
   import CardRowTitle from './CardRowTitle';
-  import VueCustomScrollbar from 'vue-custom-scrollbar';
+  import CustomScrollbar from '../CustomScrollbar';
   export default {
     components: {
-      VueCustomScrollbar,
+      CustomScrollbar,
       CardRowTitle,
     },
     data() {

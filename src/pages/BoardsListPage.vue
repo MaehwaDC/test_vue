@@ -4,6 +4,7 @@
       v-for="category in getCategories"
       :key="category.name"
       :name="category.name"
+      :class="$style.cardRow"
     >
       <board-card
         v-for="board in category.boards"
@@ -18,6 +19,11 @@
 <style lang="scss" module>
   .card:not(:last-child) {
     margin-right: 30px;
+  }
+
+  .cardRow {
+    width: calc(100% + 60px);
+    margin-left: -30px;
   }
 </style>
 

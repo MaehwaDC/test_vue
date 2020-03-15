@@ -10,6 +10,7 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "core-js": "^3.4.4",
+    "json2mq": "^0.2.0",
     "vue": "^2.6.10",
     "vue-custom-scrollbar": "^1.1.0",
     "vue-router": "^3.1.5",
